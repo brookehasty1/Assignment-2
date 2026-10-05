@@ -1,0 +1,302 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    background-image: url('resources/background.png');
+    background-repeat: repeat;
+
+    font-size: 8pt;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+
+/* Banner */
+.banner {
+    width: 100%;
+    height: 50px;
+
+    background-image: url('resources/bannerbackground.png');
+    background-repeat: repeat-x;
+    background-position: center;
+
+    
+}
+
+.banner img {
+    display: block;
+    max-width: 100%;
+    height: 50px;
+    width: auto;
+    margin: 0 auto;
+}
+
+
+/* Main 800px content frame */
+.contentContainer {
+    width: 800px;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    border: 4px solid gray;
+
+    display: grid;
+    grid-template-columns: 1fr 250px;
+}
+
+.mainColumn {
+    min-width: 0;
+}
+
+
+/* Rotten Tomatoes rating */
+.ratingHeader {
+    width: 100%;
+    height: 50px;
+
+    background-image: url('resources/rottenbackground.png');
+    background-repeat: repeat-x;
+    background-position: left;
+
+    display: flex;
+    align-items: center;
+
+    padding: 5px;
+}
+
+.ratingHeader img {
+    height: 60px;
+    width: auto;
+    display: block;
+}
+
+.score {
+    font-size: 48pt;
+    font-weight: bold;
+    color: red;
+}
+
+.totalReviews {
+    font-size: 8pt;
+    color: white;
+    align-self: flex-end;
+}
+
+
+/* Reviews */
+.reviewsContainer {
+    width: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.reviewColumn {
+    width: 47%;
+}
+
+.review {
+    box-sizing: border-box;
+
+    background-color: #E1D697;
+    border: 2px solid gray;
+    padding: 8px;
+    margin-bottom: 10px;
+
+    font-size: 8pt;
+    font-weight: bold;
+}
+
+.review img {
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.review p {
+    margin: 10px 0 0 0;
+}
+
+
+/* Reviewer information */
+.reviewer {
+    margin-top: 10px;
+    margin-bottom: 30px;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.reviewer img {
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+.reviewerInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.reviewerInfo cite {
+    font-style: italic;
+}
+
+.company {
+    font-style: italic;
+}
+
+
+/* Movie overview */
+.overview {
+    width: 250px;
+    box-sizing: border-box;
+
+    background-color: #A2B964;
+    padding: 10px;
+
+    font-family: Arial, sans-serif;
+    font-size: 8pt;
+}
+
+.overview img {
+    width: calc(100% + 20px);
+    max-width: none;
+    height: auto;
+
+    display: block;
+
+    margin: -10px -10px 10px -10px;
+}
+
+.movieInfo {
+    margin-top: 20px;
+}
+
+.overview dl {
+    margin-top: 0;
+}
+
+.overview dt {
+    margin-bottom: 10px;
+}
+
+.overview dd {
+    margin-bottom: 10px;
+}
+
+.overview a {
+    color: blue;
+}
+
+
+/* Review count */
+.pageCount {
+    grid-column: 1 / -1;
+
+    background-color: #A2B964;
+    text-align: center;
+
+    padding: 5px;
+
+    font-size: 8pt;
+}
+
+
+/* W3C validators */
+.validators {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.validators a {
+    width: 120px;
+    height: 30px;
+
+    background-color: navajowhite;
+    border: 1 px solid gray;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    text-decoration: none;
+
+    box-shadow: 2px 2px 4px gray;
+}
+
+.logoBackground {
+    height: 100%;
+    width: 35px;
+
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+
+.validators img {
+    width: 30px;
+    height: auto;
+}
+
+.checkmark {
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+/* Mobile layout */
+@media (max-width: 700px) {
+
+    .contentContainer {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    .ratingHeader {
+        width: 100%;
+    }
+
+    .reviewsContainer {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .reviewColumn {
+        width: 100%;
+    }
+
+    .review {
+        width: 100%;
+    }
+
+    .overview {
+        width: 100%;
+    }
+
+    .overview img {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+
+        margin: 0 auto 10px auto;
+    }
+}
